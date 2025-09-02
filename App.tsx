@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { ContentCard } from './components/ContentCard';
 import { getTranslatedContent } from './constants';
-import { MenuIcon, XIcon, ChevronDownIcon } from './components/icons/Icons';
+import { MenuIcon, XIcon, ChevronDownIcon, SunIcon, MoonIcon } from './components/icons/Icons';
 import type { PromptTechnique } from './types';
 
 type Theme = 'light' | 'dark';
@@ -16,10 +16,34 @@ const LANGUAGES: { code: Language; name: string }[] = [
 ];
 
 const ThemeToggle: React.FC<{ theme: Theme; toggleTheme: () => void }> = ({ theme, toggleTheme }) => (
-    <button onClick={toggleTheme} className="p-2 text-2xl rounded-full hover:bg-stone-100 dark:hover:bg-slate-700 transition-colors" aria-label="Toggle theme">
-        {theme === 'light' ? '🌙' : '☀️'}
+    <button
+        onClick={toggleTheme}
+        className="relative inline-flex items-center h-6 w-11 rounded-full bg-stone-200 dark:bg-slate-600 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-teal-500 dark:focus:ring-offset-slate-900"
+        aria-label="Toggle theme"
+        aria-pressed={theme === 'dark'}
+    >
+        <span className="sr-only">Toggle theme</span>
+        <span
+            className={`
+                absolute left-0.5 top-0.5 inline-flex items-center justify-center h-5 w-5 rounded-full 
+                bg-white
+                shadow-md 
+                transform transition-all duration-300 ease-in-out
+                ${theme === 'dark' ? 'translate-x-5' : 'translate-x-0'}
+            `}
+        >
+            <SunIcon className={`
+                h-3 w-3 text-amber-500 transition-all duration-300
+                ${theme === 'light' ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 -rotate-90'}
+            `} />
+            <MoonIcon className={`
+                absolute h-3 w-3 text-indigo-500 transition-all duration-300
+                ${theme === 'dark' ? 'opacity-100 scale-100 rotate-0' : 'opacity-0 scale-50 rotate-90'}
+            `} />
+        </span>
     </button>
 );
+
 
 const LanguageSelector: React.FC<{
     setLanguage: (lang: Language) => void;
@@ -90,9 +114,9 @@ const App: React.FC = () => {
         localStorage.setItem('language', language);
     }, [language]);
     
-    const toggleTheme = () => {
+    const toggleTheme = useCallback(() => {
         setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light');
-    };
+    }, []);
 
     const handleScroll = useCallback(() => {
         const pageYOffset = window.scrollY;
@@ -122,7 +146,7 @@ const App: React.FC = () => {
         <div className="relative min-h-screen md:flex">
             <div className="md:hidden sticky top-0 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg z-20 flex justify-between items-center p-4 border-b border-stone-200 dark:border-slate-700">
                 <h1 className="text-xl font-bold text-teal-700 dark:text-teal-400">{appTitle.split(' ')[0]}</h1>
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-4">
                     <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
                     <LanguageSelector setLanguage={setLanguage} direction="down" />
                     <button onClick={() => setIsSidebarOpen(!isSidebarOpen)} className="p-2 text-stone-600 hover:text-teal-600 dark:text-stone-300 dark:hover:text-teal-400">
@@ -140,8 +164,8 @@ const App: React.FC = () => {
                 appTitle={appTitle}
             >
                 <div className="hidden md:flex justify-between items-center gap-2 p-2 border-t border-stone-200 dark:border-slate-700">
-                    <LanguageSelector setLanguage={setLanguage} direction="up" />
                     <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
+                    <LanguageSelector setLanguage={setLanguage} direction="up" />
                 </div>
             </Sidebar>
 
