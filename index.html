@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía Interactiva de Prompting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 
+      Paleta de Colores: Neutros Cálidos y Verde Azulado Suave (Warm Neutrals & Soft Teal)
+      - Light Mode:
+        - Fondo (Background): bg-stone-50 (#F9FAFB)
+        - Tarjetas (Cards): bg-white (#FFFFFF)
+        - Texto Principal: text-stone-800 (#292524)
+        - Texto Secundario: text-stone-500 (#78716C)
+        - Acento: bg-teal-600 (#0D9488)
+        - Bordes: border-stone-200 (#E7E5E4)
+      - Dark Mode:
+        - Fondo (Background): bg-slate-900
+        - Tarjetas (Cards): bg-slate-800
+        - Texto Principal: text-stone-100
+        - Texto Secundario: text-stone-400
+        - Acento: bg-teal-500
+        - Bordes: border-slate-700
+    -->
+    <script>
+        // Previene el "flash of incorrect theme" al cargar la página.
+        // Se ejecuta antes de que React se renderice.
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+</head>
+<body class="bg-stone-50 text-stone-800 dark:bg-slate-900 dark:text-stone-100 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
