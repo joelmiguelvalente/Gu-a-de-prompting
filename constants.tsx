@@ -23,6 +23,45 @@ const translations = {
             structure: 'Estructura y Claridad',
             optimization: 'Optimización y Refinamiento'
         },
+        card: {
+            whatIsIt: '¿Qué es?',
+            analogy: 'Analogía Simple',
+            diagram: 'Diagrama de Flujo',
+            example: 'Ejemplo y Plantilla',
+            promptExample: 'Ejemplo de Prompt',
+            template: 'Plantilla',
+            copy: 'Copiar',
+            copied: 'Copiado',
+        },
+        diagrams: {
+            question: 'Pregunta',
+            aiModel: 'Modelo IA',
+            answer: 'Respuesta',
+            singleExample: 'Ejemplo Único',
+            guidedAnswer: 'Respuesta Guiada',
+            example1: 'Ejemplo 1',
+            example2: 'Ejemplo 2',
+            patternAnswer: 'Respuesta con Patrón',
+            complexQuestion: 'Pregunta Compleja',
+            stepByStep: '"Piensa paso a paso..."',
+            finalAnswer: 'Respuesta Final',
+            initialPrompt: 'Prompt Inicial',
+            draft: 'Borrador',
+            critiquePrompt: 'Prompt de Crítica',
+            refinedAnswer: 'Respuesta Refinada',
+            instruction: 'Instrucción',
+            context: 'Contexto',
+            task: 'Tarea',
+            formatAsJson: '"Formatea como JSON"',
+            vagueQuestion: 'Pregunta Vaga',
+            specificQuestion: 'Pregunta Específica',
+            betterAnswer: 'Mejor Respuesta',
+            actAsRole: '"Actúa como [Rol]"',
+            tonedAnswer: 'Respuesta con Tono',
+            detailedContext: 'Contexto Detallado',
+            specificTask: 'Tarea Específica',
+            preciseAnswer: 'Respuesta Precisa'
+        },
         content: {
             'zero-shot': {
                 title: 'Zero-Shot Prompting',
@@ -46,7 +85,6 @@ const translations = {
                 title: 'Few-Shot Prompting',
                 explanation: 'Se ofrecen varios ejemplos (generalmente de 2 a 5) para guiar al modelo. Esta técnica es muy eficaz para tareas complejas o con formatos de salida específicos, ya que establece un patrón claro.',
                 analogy: 'Es como enseñarle a un niño a sumar mostrándole "2+2=4", "3+3=6" y luego preguntarle "¿Cuánto es 4+4?".',
-                diagram: <FewShotDiagram />,
                 example: {
                     prompt: `Extrae el nombre del producto y el color de las frases:\n\nFrase: "Quiero comprar una camiseta roja."\nProducto: camiseta, Color: rojo\n\nFrase: "Me interesan los pantalones azules."\nProducto: pantalones, Color: azul\n\nFrase: "Busco una sudadera verde."\nProducto:`,
                     template: `[Descripción de la tarea]\n\n[Ejemplo 1: Entrada -> Salida]\n[Ejemplo 2: Entrada -> Salida]\n...\n[Tu Entrada] ->`
@@ -125,6 +163,45 @@ const translations = {
             advanced: 'Advanced Techniques',
             structure: 'Structure & Clarity',
             optimization: 'Optimization & Refinement'
+        },
+        card: {
+            whatIsIt: 'What is it?',
+            analogy: 'Simple Analogy',
+            diagram: 'Flow Diagram',
+            example: 'Example & Template',
+            promptExample: 'Prompt Example',
+            template: 'Template',
+            copy: 'Copy',
+            copied: 'Copied',
+        },
+        diagrams: {
+            question: 'Question',
+            aiModel: 'AI Model',
+            answer: 'Answer',
+            singleExample: 'Single Example',
+            guidedAnswer: 'Guided Answer',
+            example1: 'Example 1',
+            example2: 'Example 2',
+            patternAnswer: 'Patterned Answer',
+            complexQuestion: 'Complex Question',
+            stepByStep: '"Think step-by-step..."',
+            finalAnswer: 'Final Answer',
+            initialPrompt: 'Initial Prompt',
+            draft: 'Draft',
+            critiquePrompt: 'Critique Prompt',
+            refinedAnswer: 'Refined Answer',
+            instruction: 'Instruction',
+            context: 'Context',
+            task: 'Task',
+            formatAsJson: '"Format as JSON"',
+            vagueQuestion: 'Vague Question',
+            specificQuestion: 'Specific Question',
+            betterAnswer: 'Better Answer',
+            actAsRole: '"Act as [Role]"',
+            tonedAnswer: 'Toned Answer',
+            detailedContext: 'Detailed Context',
+            specificTask: 'Specific Task',
+            preciseAnswer: 'Precise Answer'
         },
         content: {
             'zero-shot': {
@@ -228,6 +305,45 @@ const translations = {
             structure: 'Struttura e Chiarezza',
             optimization: 'Ottimizzazione e Rifinitura'
         },
+        card: {
+            whatIsIt: 'Cos\'è?',
+            analogy: 'Analogia Semplice',
+            diagram: 'Diagramma di Flusso',
+            example: 'Esempio e Template',
+            promptExample: 'Esempio di Prompt',
+            template: 'Template',
+            copy: 'Copia',
+            copied: 'Copiato',
+        },
+        diagrams: {
+            question: 'Domanda',
+            aiModel: 'Modello IA',
+            answer: 'Risposta',
+            singleExample: 'Esempio Singolo',
+            guidedAnswer: 'Risposta Guidata',
+            example1: 'Esempio 1',
+            example2: 'Esempio 2',
+            patternAnswer: 'Risposta con Pattern',
+            complexQuestion: 'Domanda Complessa',
+            stepByStep: '"Pensa passo dopo passo..."',
+            finalAnswer: 'Risposta Finale',
+            initialPrompt: 'Prompt Iniziale',
+            draft: 'Bozza',
+            critiquePrompt: 'Prompt di Critica',
+            refinedAnswer: 'Risposta Rifinita',
+            instruction: 'Istruzione',
+            context: 'Contesto',
+            task: 'Compito',
+            formatAsJson: '"Formatta come JSON"',
+            vagueQuestion: 'Domanda Vaga',
+            specificQuestion: 'Domanda Specifica',
+            betterAnswer: 'Risposta Migliore',
+            actAsRole: '"Agisci come [Ruolo]"',
+            tonedAnswer: 'Risposta con Tono',
+            detailedContext: 'Contesto Dettagliato',
+            specificTask: 'Compito Specifico',
+            preciseAnswer: 'Risposta Precisa'
+        },
         content: {
             'zero-shot': {
                 title: 'Prompting Zero-Shot',
@@ -238,7 +354,87 @@ const translations = {
                     template: `[Istruzione o Domanda Diretta]\n\n[Il Tuo Testo/Dato Qui]\n\nRisposta:`
                 }
             },
-            // ... (partial translation for brevity)
+            'one-shot': {
+                title: 'Prompting One-Shot',
+                explanation: 'Viene fornito un singolo esempio del compito desiderato insieme alla domanda. Questo aiuta il modello a comprendere meglio il contesto e il formato di risposta atteso.',
+                analogy: 'È come dire: "Un cane fa \'bau\'. Cosa fa un gatto?". Gli dai un indizio per capire lo schema.',
+                example: {
+                    prompt: `Traduci dall'inglese al francese:\n\nsea otter -> loutre de mer\n\ncheese ->`,
+                    template: `[Descrizione del compito]\n\n[Esempio: Input -> Output]\n\n[Il Tuo Input] ->`
+                }
+            },
+            'few-shot': {
+                title: 'Prompting Few-Shot',
+                explanation: 'Vengono forniti diversi esempi (di solito da 2 a 5) per guidare il modello. Questa tecnica è molto efficace per compiti complessi o formati di output specifici poiché stabilisce un pattern chiaro.',
+                analogy: 'È come insegnare a un bambino ad addizionare mostrandogli "2+2=4", "3+3=6", e poi chiedendogli "Quanto fa 4+4?".',
+                example: {
+                    prompt: `Estrai il nome del prodotto e il colore dalle frasi:\n\nFrase: "Voglio comprare una maglietta rossa."\nProdotto: maglietta, Colore: rosso\n\nFrase: "Sono interessato ai pantaloni blu."\nProdotto: pantaloni, Colore: blu\n\nFrase: "Sto cercando una felpa verde."\nProdotto:`,
+                    template: `[Descrizione del compito]\n\n[Esempio 1: Input -> Output]\n[Esempio 2: Input -> Output]\n...\n[Il Tuo Input] ->`
+                }
+            },
+            'chain-of-thought': {
+                title: 'Chain-of-Thought (CoT)',
+                explanation: 'Al modello viene chiesto di "pensare ad alta voce" o di scomporre il suo ragionamento passo dopo passo prima di dare la risposta finale. Ciò migliora notevolmente le prestazioni su problemi logici, matematici e a più fasi.',
+                analogy: 'È come chiedere a un matematico non solo il risultato di un problema, ma di mostrare tutti i passaggi sulla lavagna. In questo modo è più probabile che arrivi alla soluzione corretta.',
+                example: {
+                    prompt: `D: Giovanni ha 5 mele. Compra 2 scatole di mele con 6 mele ciascuna. Quante mele ha adesso?\n\nR: Giovanni ha iniziato con 5 mele. Poi ha comprato 2 scatole da 6 mele, che sono 2 * 6 = 12 mele. Pertanto, ora ha 5 + 12 = 17 mele. La risposta è 17.\n\nD: Maria ha 3 palloncini. Gliene regalano il doppio di quelli che ha e poi uno scoppia. Quanti palloncini le rimangono?\n\nR:`,
+                    template: `D: [Domanda Complessa 1]\nR: [Ragionamento passo-passo 1]... La risposta è [Risposta 1].\n\nD: [La Tua Domanda Complessa]\nR:`
+                }
+            },
+            'reflection': {
+                title: 'Prompting di Riflessione',
+                explanation: 'Questa tecnica prevede un processo in due fasi: prima viene generata una risposta iniziale. Poi, al modello viene chiesto di valutare, criticare o migliorare quella prima risposta, portando a un risultato finale più rifinito e accurato.',
+                analogy: 'È come scrivere la bozza di un saggio (prima risposta) e poi darla a un editor (il modello stesso in un secondo prompt) per revisionarla e suggerire miglioramenti.',
+                example: {
+                    prompt: `[PASSO 1 - GENERAZIONE INIZIALE]\n"Scrivi un breve paragrafo sui benefici dell'energia solare."\n\n[PASSO 2 - RIFLESSIONE E MIGLIORAMENTO]\n"Rivedi il seguente paragrafo e miglioralo per renderlo più persuasivo e menzionare dati specifici:\n\n[Paragrafo generato nel passo 1]"\n\nVersione migliorata:`,
+                    template: `[Passo 1: Generazione]\n[Prompt Iniziale]\n\n[Passo 2: Riflessione]\n"Valuta la seguente risposta in base a [criteri: coerenza, accuratezza, ecc.] e genera una versione migliorata:\n\n[Risposta del Passo 1]"`
+                }
+            },
+            'delimiters': {
+                title: 'Uso di Delimitatori',
+                explanation: 'Usa delimitatori chiari (come tripli apici ```, tag XML <tag>, o trattini ---) per separare diverse parti del tuo prompt, come istruzioni, contesto e dati di input. Questo aiuta il modello a non confondere le istruzioni con il testo che deve elaborare.',
+                analogy: 'È come usare le virgolette per citare qualcuno in un testo. Rendi chiaro quali parole sono tue e quali sono la citazione. I delimitatori fanno lo stesso per il modello.',
+                example: {
+                    prompt: `Riassumi il testo racchiuso tra tripli apici in una sola frase.\n\n\`\`\`\n[Qui andrebbe un testo lungo e dettagliato su qualsiasi argomento.]\n\`\`\`\n\nRiassunto:`,
+                    template: `[Istruzione]\n\n[Delimitatore di Inizio]\n[Il Tuo Testo/Contesto/Dato]\n[Delimitatore di Fine]`
+                }
+            },
+            'format-specification': {
+                title: 'Specificazione del Formato',
+                explanation: 'Indica esplicitamente il formato di output desiderato. Puoi chiedergli di generare la risposta in JSON, Markdown, un elenco puntato, una tabella, ecc. Più sei specifico, migliore sarà il risultato.',
+                analogy: 'È come ordinare una pizza. Non dici solo "voglio una pizza", specifichi gli ingredienti, la dimensione e se la vuoi con il cornicione ripieno di formaggio. Dai istruzioni chiare per ottenere ciò che vuoi.',
+                example: {
+                    prompt: `Genera un elenco di tre idee per un nome di blog sulla cucina vegana. Formatta la risposta come un oggetto JSON con le chiavi "nome" e "descrizione".\n\nJSON:`,
+                    template: `[Istruzione]\n\nGenera la risposta nel seguente formato:\n[Descrizione del formato, es: JSON, Markdown, Elenco]`
+                }
+            },
+            'prompt-reframing': {
+                title: 'Riformulazione del Prompt',
+                explanation: 'Consiste nel riformulare o cambiare il focus della tua domanda per guidare il modello verso una risposta migliore. A volte, un piccolo cambiamento di prospettiva può sbloccare risultati molto più accurati o creativi.',
+                analogy: 'Se chiedi a un GPS "Come evito il traffico?", potrebbe non darti il percorso migliore. Ma se chiedi "Qual è il percorso più veloce per la mia destinazione in questo momento?", ottimizzerà la risposta in base a quell\'obiettivo.',
+                example: {
+                    prompt: `[Prompt Originale]\n"Scrivi perché i cani sono buoni animali domestici."\n\n[Prompt Riformulato (Migliore)]\n"Agisci come un veterinario esperto. Scrivi un articolo per un blog familiare spiegando i benefici emotivi e per la salute di avere un cane come animale domestico, citando esempi concreti."`,
+                    template: `[Prompt Vago/Iniziale]\n"Parlami di [Argomento X]"\n\n[Prompt Riformulato]\n"Agisci come [Ruolo Esperto]. Il tuo obiettivo è [Obiettivo Chiaro]. Scrivi di [Argomento X] per un pubblico di [Pubblico Specifico]."`
+                }
+            },
+            'adaptation-personalization': {
+                title: 'Adattamento e Personalizzazione',
+                explanation: 'Assegna al modello un "ruolo" o una "persona" specifica (es. "Agisci come un pirata", "Sei un esperto di fisica quantistica"). Questo adatta il tono, lo stile e il livello di conoscenza della risposta per soddisfare meglio le tue esigenze.',
+                analogy: 'È la differenza tra chiedere un consiglio a un amico e chiederlo a un avvocato. Il ruolo definisce la prospettiva e il tipo di risposta che riceverai.',
+                example: {
+                    prompt: `Agisci come una guida turistica entusiasta a Roma. Descrivi il Colosseo in tre brevi frasi, trasmettendo emozione e stupore.`,
+                    template: `Agisci come un [Ruolo/Persona].\n\n[La Tua Domanda o Compito]`
+                }
+            },
+            'context-expansion': {
+                title: 'Espansione del Contesto',
+                explanation: 'Fornisci un contesto pertinente e sufficiente all\'interno del prompt. Ciò può includere informazioni di base, dati chiave o la definizione di termini ambigui per garantire che il modello disponga di tutte le informazioni necessarie per generare una risposta di alta qualità.',
+                analogy: 'È come assumere un designer. Non dici solo "fammi un logo". Gli fornisci informazioni sulla tua azienda, il tuo pubblico di destinazione, i tuoi colori aziendali ed esempi che ti piacciono. Più contesto = risultato migliore.',
+                example: {
+                    prompt: `Contesto: Stiamo sviluppando un'app di fitness per principianti. Il tono deve essere motivante e semplice.\n\nCompito: Scrivi 3 messaggi di notifica per ricordare all'utente di fare esercizio oggi.\n\nMessaggi:`,
+                    template: `Contesto: [Informazioni di base pertinenti]\n\nDefinizioni: [Se ci sono termini ambigui]\n\nCompito: [La Tua Richiesta Specifica]`
+                }
+            },
         }
     },
     pt: {
@@ -250,6 +446,45 @@ const translations = {
             structure: 'Estrutura e Clareza',
             optimization: 'Otimização e Refinamento'
         },
+        card: {
+            whatIsIt: 'O que é?',
+            analogy: 'Analogia Simples',
+            diagram: 'Diagrama de Fluxo',
+            example: 'Exemplo e Modelo',
+            promptExample: 'Exemplo de Prompt',
+            template: 'Modelo',
+            copy: 'Copiar',
+            copied: 'Copiado',
+        },
+        diagrams: {
+            question: 'Pergunta',
+            aiModel: 'Modelo de IA',
+            answer: 'Resposta',
+            singleExample: 'Exemplo Único',
+            guidedAnswer: 'Resposta Guiada',
+            example1: 'Exemplo 1',
+            example2: 'Exemplo 2',
+            patternAnswer: 'Resposta com Padrão',
+            complexQuestion: 'Pergunta Complexa',
+            stepByStep: '"Pense passo a passo..."',
+            finalAnswer: 'Resposta Final',
+            initialPrompt: 'Prompt Inicial',
+            draft: 'Rascunho',
+            critiquePrompt: 'Prompt de Crítica',
+            refinedAnswer: 'Resposta Refinada',
+            instruction: 'Instrução',
+            context: 'Contexto',
+            task: 'Tarefa',
+            formatAsJson: '"Formatar como JSON"',
+            vagueQuestion: 'Pergunta Vaga',
+            specificQuestion: 'Pergunta Específica',
+            betterAnswer: 'Melhor Resposta',
+            actAsRole: '"Aja como [Papel]"',
+            tonedAnswer: 'Resposta com Tom',
+            detailedContext: 'Contexto Detalhado',
+            specificTask: 'Tarefa Específica',
+            preciseAnswer: 'Resposta Precisa'
+        },
         content: {
             'zero-shot': {
                 title: 'Prompting Zero-Shot',
@@ -260,37 +495,121 @@ const translations = {
                     template: `[Instrução ou Pergunta Direta]\n\n[Seu Texto/Dado Aqui]\n\nResposta:`
                 }
             },
-            // ... (partial translation for brevity)
+            'one-shot': {
+                title: 'Prompting One-Shot',
+                explanation: 'Um único exemplo da tarefa desejada é fornecido junto com a pergunta. Isso ajuda o modelo a entender melhor o contexto e o formato de resposta esperado.',
+                analogy: 'É como dizer: "Um cachorro diz \'au\'. O que um gato diz?". Você dá uma dica para ele entender o padrão.',
+                example: {
+                    prompt: `Traduza do inglês para o francês:\n\nsea otter -> loutre de mer\n\ncheese ->`,
+                    template: `[Descrição da tarefa]\n\n[Exemplo: Entrada -> Saída]\n\n[Sua Entrada] ->`
+                }
+            },
+            'few-shot': {
+                title: 'Prompting Few-Shot',
+                explanation: 'Vários exemplos (geralmente 2 a 5) são fornecidos para guiar o modelo. Esta técnica é muito eficaz para tarefas complexas ou formatos de saída específicos, pois estabelece um padrão claro.',
+                analogy: 'É como ensinar una criança a somar mostrando "2+2=4", "3+3=6" e depois perguntar "Quanto é 4+4?".',
+                example: {
+                    prompt: `Extraia o nome do produto e a cor das frases:\n\nFrase: "Quero comprar uma camiseta vermelha."\nProduto: camiseta, Cor: vermelho\n\nFrase: "Estou interessado nas calças azuis."\nProduto: calças, Cor: azul\n\nFrase: "Procuro um moletom verde."\nProduto:`,
+                    template: `[Descrição da tarefa]\n\n[Exemplo 1: Entrada -> Saída]\n[Exemplo 2: Entrada -> Saída]\n...\n[Sua Entrada] ->`
+                }
+            },
+            'chain-of-thought': {
+                title: 'Chain-of-Thought (CoT)',
+                explanation: 'Pede-se ao modelo que "pense em voz alta" ou detalhe seu raciocínio passo a passo antes de dar a resposta final. Isso melhora drasticamente o desempenho em problemas lógicos, matemáticos e de várias etapas.',
+                analogy: 'É como pedir a um matemático que não apenas dê o resultado de um problema, mas que mostre todo o desenvolvimento no quadro. Assim, é mais provável que ele chegue à solução correta.',
+                example: {
+                    prompt: `P: João tem 5 maçãs. Ele compra 2 caixas de maçãs com 6 maçãs cada. Quantas maçãs ele tem agora?\n\nR: João começou com 5 maçãs. Depois, comprou 2 caixas de 6 maçãs, o que dá 2 * 6 = 12 maçãs. Portanto, agora ele tem 5 + 12 = 17 maçãs. A resposta é 17.\n\nP: Maria tem 3 balões. Ela ganha o dobro do que tem e depois um estoura. Com quantos balões ela fica?\n\nR:`,
+                    template: `P: [Pergunta Complexa 1]\nR: [Raciocínio passo a passo 1]... A resposta é [Resposta 1].\n\nP: [Sua Pergunta Complexa]\nR:`
+                }
+            },
+            'reflection': {
+                title: 'Prompting de Reflexão',
+                explanation: 'Esta técnica envolve um processo de duas etapas: primeiro, uma resposta inicial é gerada. Em seguida, pede-se ao modelo que avalie, critique ou melhore essa primeira resposta, o que leva a um resultado final mais refinado e preciso.',
+                analogy: 'É como escrever um rascunho de uma redação (primeira resposta) e depois entregá-lo a um editor (o próprio modelo em um segundo prompt) para que ele revise e sugira melhorias.',
+                example: {
+                    prompt: `[PASSO 1 - GERAÇÃO INICIAL]\n"Escreva um parágrafo curto sobre os benefícios da energia solar."\n\n[PASSO 2 - REFLEXÃO E MELHORIA]\n"Revise o parágrafo a seguir e melhore-o para que seja mais persuasivo e mencione dados específicos:\n\n[Parágrafo gerado no passo 1]"\n\nVersão melhorada:`,
+                    template: `[Passo 1: Geração]\n[Prompt Inicial]\n\n[Passo 2: Reflexão]\n"Avalie a seguinte resposta [critério: coerência, precisão, etc.] e gere uma versão melhorada:\n\n[Resposta do Passo 1]"`
+                }
+            },
+            'delimiters': {
+                title: 'Uso de Delimitadores',
+                explanation: 'Utilize delimitadores claros (como crases triplas ```, tags XML <tag>, ou hifens ---) para separar diferentes partes do seu prompt, como instruções, contexto e dados de entrada. Isso ajuda o modelo a não confundir as instruções com o texto que ele deve processar.',
+                analogy: 'É como usar aspas para citar alguém em um texto. Você deixa claro quais palavras são suas e quais são a citação. Os delimitadores fazem o mesmo para o modelo.',
+                example: {
+                    prompt: `Resuma o texto que está entre as crases triplas em uma única frase.\n\n\`\`\`\n[Aqui iria um texto longo e detalhado sobre qualquer tema.]\n\`\`\`\n\nResumo:`,
+                    template: `[Instrução]\n\n[Delimitador de Início]\n[Seu Texto/Contexto/Dado]\n[Delimitador de Fim]`
+                }
+            },
+            'format-specification': {
+                title: 'Especificação de Formato',
+                explanation: 'Indique explicitamente o formato de saída desejado. Você pode pedir para ele gerar a resposta em JSON, Markdown, uma lista com marcadores, uma tabela, etc. Quanto mais específico você for, melhor será o resultado.',
+                analogy: 'É como pedir uma pizza. Você não diz apenas "quero uma pizza", você especifica os ingredientes, o tamanho e se quer com a borda recheada de queijo. Você dá instruções claras para obter o que quer.',
+                example: {
+                    prompt: `Gere uma lista de três ideias para um nome de blog sobre culinária vegana. Formate a resposta como um objeto JSON com as chaves "nome" e "descricao".\n\nJSON:`,
+                    template: `[Instrução]\n\nGere a resposta no seguinte formato:\n[Descrição do formato, ex: JSON, Markdown, Lista]`
+                }
+            },
+            'prompt-reframing': {
+                title: 'Reenquadramento de Prompt',
+                explanation: 'Consiste em reformular ou mudar o foco da sua pergunta para guiar o modelo a uma resposta melhor. Às vezes, uma pequena mudança na perspectiva pode desbloquear resultados muito mais precisos ou criativos.',
+                analogy: 'Se você perguntar a um GPS "Como evito o trânsito?", ele pode não te dar a melhor rota. Mas se você perguntar "Qual é a rota mais rápida para o meu destino agora?", ele otimizará a resposta com base nesse objetivo.',
+                example: {
+                    prompt: `[Prompt Original]\n"Escreva sobre por que cachorros são bons animais de estimação."\n\n[Prompt Reenquadrado (Melhor)]\n"Aja como um veterinário especialista. Redija um artigo para um blog familiar explicando os benefícios emocionais e de saúde de ter um cachorro como animal de estimação, citando exemplos concretos."`,
+                    template: `[Prompt Vago/Inicial]\n"Fale-me sobre [Tópico X]"\n\n[Prompt Reenquadrado]\n"Aja como [Papel de Especialista]. Seu objetivo é [Objetivo Claro]. Escreva sobre [Tópico X] para uma audiência de [Público Específico]."`
+                }
+            },
+            'adaptation-personalization': {
+                title: 'Adaptação e Personalização',
+                explanation: 'Atribuir ao modelo um "papel" ou "persona" específico (ex: "Aja como um pirata", "Você é um especialista em física quântica"). Isso ajusta o tom, o estilo e o nível de conhecimento da resposta para se adequar melhor às suas necessidades.',
+                analogy: 'É a diferença entre pedir um conselho a um amigo e pedir a um advogado. O papel define a perspectiva e o tipo de resposta que você receberá.',
+                example: {
+                    prompt: `Aja como um guia turístico entusiasmado de Roma. Descreva o Coliseu em três frases curtas, transmitindo emoção e admiração.`,
+                    template: `Aja como um [Papel/Persona].\n\n[Sua Pergunta ou Tarefa]`
+                }
+            },
+            'context-expansion': {
+                title: 'Expansão de Contexto',
+                explanation: 'Forneça contexto relevante e suficiente dentro do prompt. Isso pode incluir informações de fundo, dados-chave ou definir termos ambíguos para garantir que o modelo tenha todas as informações necessárias para gerar uma resposta de alta qualidade.',
+                analogy: 'É como contratar um designer. Você não diz apenas "faça um logotipo para mim". Você fornece informações sobre sua empresa, seu público-alvo, suas cores corporativas e exemplos que você gosta. Mais contexto = melhor resultado.',
+                example: {
+                    prompt: `Contexto: Estamos desenvolvendo um aplicativo de fitness para iniciantes. O tom deve ser motivador e simples.\n\nTarefa: Escreva 3 mensagens de notificação para lembrar o usuário de se exercitar hoje.\n\nMensagens:`,
+                    template: `Contexto: [Informações de fundo relevantes]\n\nDefinições: [Se houver termos ambíguos]\n\nTarefa: [Sua Solicitação Específica]`
+                }
+            },
         }
     }
 };
 
 const STATIC_CONTENT = [
-    { id: 'zero-shot', categoryKey: 'basic', diagram: <ZeroShotDiagram /> },
-    { id: 'one-shot', categoryKey: 'basic', diagram: <OneShotDiagram /> },
-    { id: 'few-shot', categoryKey: 'basic', diagram: <FewShotDiagram /> },
-    { id: 'chain-of-thought', categoryKey: 'advanced', diagram: <CoTDiagram /> },
-    { id: 'reflection', categoryKey: 'advanced', diagram: <ReflectionDiagram /> },
-    { id: 'delimiters', categoryKey: 'structure', diagram: <DelimiterDiagram /> },
-    { id: 'format-specification', categoryKey: 'structure', diagram: <FormatDiagram /> },
-    { id: 'prompt-reframing', categoryKey: 'optimization', diagram: <ReframingDiagram /> },
-    { id: 'adaptation-personalization', categoryKey: 'optimization', diagram: <PersonalizationDiagram /> },
-    { id: 'context-expansion', categoryKey: 'optimization', diagram: <ContextExpansionDiagram /> },
+    { id: 'zero-shot', categoryKey: 'basic', DiagramComponent: ZeroShotDiagram },
+    { id: 'one-shot', categoryKey: 'basic', DiagramComponent: OneShotDiagram },
+    { id: 'few-shot', categoryKey: 'basic', DiagramComponent: FewShotDiagram },
+    { id: 'chain-of-thought', categoryKey: 'advanced', DiagramComponent: CoTDiagram },
+    { id: 'reflection', categoryKey: 'advanced', DiagramComponent: ReflectionDiagram },
+    { id: 'delimiters', categoryKey: 'structure', DiagramComponent: DelimiterDiagram },
+    { id: 'format-specification', categoryKey: 'structure', DiagramComponent: FormatDiagram },
+    { id: 'prompt-reframing', categoryKey: 'optimization', DiagramComponent: ReframingDiagram },
+    { id: 'adaptation-personalization', categoryKey: 'optimization', DiagramComponent: PersonalizationDiagram },
+    { id: 'context-expansion', categoryKey: 'optimization', DiagramComponent: ContextExpansionDiagram },
 ];
 
 export const getTranslatedContent = (lang: string) => {
     const langKey = lang as keyof typeof translations;
-    const t = { ...translations['es'], ...translations[langKey] }; // Fallback to Spanish
-    const contentT = { ...translations['es'].content, ...translations[langKey]?.content };
+    const t = translations[langKey] || translations['es'];
+    const contentT = t.content;
+    const diagramLabels = t.diagrams;
 
     const guideContent: PromptTechnique[] = STATIC_CONTENT.map(item => {
         const translatedItem = contentT[item.id as keyof typeof contentT];
+        const { DiagramComponent } = item;
         return {
-            ...item,
+            id: item.id,
+            categoryKey: item.categoryKey,
             title: translatedItem.title,
             explanation: translatedItem.explanation,
             analogy: translatedItem.analogy,
             example: translatedItem.example,
+            diagram: <DiagramComponent labels={diagramLabels} />,
         };
     });
 
@@ -298,6 +617,7 @@ export const getTranslatedContent = (lang: string) => {
         appTitle: t.appTitle,
         appDescription: t.appDescription,
         categories: t.categories,
+        cardLabels: t.card,
         guideContent,
     };
 };

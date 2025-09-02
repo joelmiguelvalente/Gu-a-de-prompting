@@ -1,6 +1,14 @@
 import React from 'react';
 import { ArrowRightIcon } from '../icons/Icons';
 
+interface DiagramLabels {
+    [key: string]: string;
+}
+
+interface DiagramProps {
+    labels: DiagramLabels;
+}
+
 const DiagramBox: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
     <div className={`text-center py-2 px-4 rounded-md border border-stone-300 dark:border-slate-600 bg-white dark:bg-slate-700 shadow-sm text-sm text-stone-700 dark:text-stone-200 ${className}`}>
         {children}
@@ -23,127 +31,127 @@ const AccentBox: React.FC<{ children: React.ReactNode; className?: string }> = (
     </DiagramBox>
 );
 
-export const ZeroShotDiagram: React.FC = () => (
+export const ZeroShotDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Pregunta</DiagramBox>
+        <DiagramBox>{labels.question}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta</HighlightBox>
+        <HighlightBox>{labels.answer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const OneShotDiagram: React.FC = () => (
+export const OneShotDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Ejemplo Único</DiagramBox>
+        <DiagramBox>{labels.singleExample}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Pregunta</DiagramBox>
+        <DiagramBox>{labels.question}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta Guiada</HighlightBox>
+        <HighlightBox>{labels.guidedAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const FewShotDiagram: React.FC = () => (
+export const FewShotDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Ejemplo 1</DiagramBox>
-        <DiagramBox>Ejemplo 2</DiagramBox>
+        <DiagramBox>{labels.example1}</DiagramBox>
+        <DiagramBox>{labels.example2}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Pregunta</DiagramBox>
+        <DiagramBox>{labels.question}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta con Patrón</HighlightBox>
+        <HighlightBox>{labels.patternAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const CoTDiagram: React.FC = () => (
+export const CoTDiagram: React.FC<DiagramProps> = ({ labels }) => (
      <DiagramContainer>
-        <DiagramBox>Pregunta Compleja</DiagramBox>
+        <DiagramBox>{labels.complexQuestion}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <AccentBox>"Piensa paso a paso..."</AccentBox>
+        <AccentBox>{labels.stepByStep}</AccentBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta Final</HighlightBox>
+        <HighlightBox>{labels.finalAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const ReflectionDiagram: React.FC = () => (
+export const ReflectionDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Prompt Inicial</DiagramBox>
+        <DiagramBox>{labels.initialPrompt}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox className="bg-stone-200 dark:bg-slate-600">Borrador</DiagramBox>
+        <DiagramBox className="bg-stone-200 dark:bg-slate-600">{labels.draft}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Prompt de Crítica</DiagramBox>
+        <DiagramBox>{labels.critiquePrompt}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta Refinada</HighlightBox>
+        <HighlightBox>{labels.refinedAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const DelimiterDiagram: React.FC = () => (
+export const DelimiterDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Instrucción</DiagramBox>
+        <DiagramBox>{labels.instruction}</DiagramBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
         <HighlightBox className="font-mono">```</HighlightBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
-        <DiagramBox>Contexto</DiagramBox>
+        <DiagramBox>{labels.context}</DiagramBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
         <HighlightBox className="font-mono">```</HighlightBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
     </DiagramContainer>
 );
 
-export const FormatDiagram: React.FC = () => (
+export const FormatDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox>Tarea</DiagramBox>
+        <DiagramBox>{labels.task}</DiagramBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
-        <AccentBox>"Formatea como JSON"</AccentBox>
+        <AccentBox>{labels.formatAsJson}</AccentBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
         <HighlightBox className="font-mono">{"{ ... }"}</HighlightBox>
     </DiagramContainer>
 );
 
-export const ReframingDiagram: React.FC = () => (
+export const ReframingDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <DiagramBox className="line-through text-stone-400 dark:text-slate-500">Pregunta Vaga</DiagramBox>
+        <DiagramBox className="line-through text-stone-400 dark:text-slate-500">{labels.vagueQuestion}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Pregunta Específica</DiagramBox>
+        <DiagramBox>{labels.specificQuestion}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Mejor Respuesta</HighlightBox>
+        <HighlightBox>{labels.betterAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const PersonalizationDiagram: React.FC = () => (
+export const PersonalizationDiagram: React.FC<DiagramProps> = ({ labels }) => (
     <DiagramContainer>
-        <AccentBox>"Actúa como [Rol]"</AccentBox>
+        <AccentBox>{labels.actAsRole}</AccentBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
-        <DiagramBox>Pregunta</DiagramBox>
+        <DiagramBox>{labels.question}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta con Tono</HighlightBox>
+        <HighlightBox>{labels.tonedAnswer}</HighlightBox>
     </DiagramContainer>
 );
 
-export const ContextExpansionDiagram: React.FC = () => (
+export const ContextExpansionDiagram: React.FC<DiagramProps> = ({ labels }) => (
      <DiagramContainer>
-        <DiagramBox>Contexto Detallado</DiagramBox>
+        <DiagramBox>{labels.detailedContext}</DiagramBox>
         <div className="font-mono text-teal-600 dark:text-teal-400">+</div>
-        <DiagramBox>Tarea Específica</DiagramBox>
+        <DiagramBox>{labels.specificTask}</DiagramBox>
         <ArrowRightIcon />
-        <DiagramBox>Modelo IA</DiagramBox>
+        <DiagramBox>{labels.aiModel}</DiagramBox>
         <ArrowRightIcon />
-        <HighlightBox>Respuesta Precisa</HighlightBox>
+        <HighlightBox>{labels.preciseAnswer}</HighlightBox>
     </DiagramContainer>
 );
